@@ -47,6 +47,7 @@
     {:value    id
      :expires (now-plus duration)
      :same-site :none
+     :secure true
      :path (if (nil? path)
        "/"
        path)}
