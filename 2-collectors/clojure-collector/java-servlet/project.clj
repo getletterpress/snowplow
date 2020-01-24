@@ -18,15 +18,16 @@
   :url "http://www.apache.org/licenses/LICENSE-2.0"}
   :description "A SnowPlow event collector written in Clojure. AWS Elastic Beanstalk compatible."
   :dependencies     [[org.clojure/clojure "1.9.0"]
-                     [ring/ring-core "1.6.3"]
-                     [ring/ring-devel "1.6.3"]
+                     [ring/ring-core "1.8.0"]
+                     [ring/ring-devel "1.8.0"]
                      [compojure "1.6.1"]
                      [metrics-clojure "2.10.0"]
                      [metrics-clojure-ring "2.10.0"]
-                     [commons-codec/commons-codec "1.11"]]
+                     [commons-codec/commons-codec "1.11"]
+                     [joda-time/joda-time "2.8.2"]]
   ;; The jetty adapter is only used during development
   :profiles         {:dev {:dependencies [[ring/ring-jetty-adapter "1.6.3"]]}}
   :war-resources-path   "war-resources"
-  :plugins          [[lein-ring "0.12.4"]]
+  :plugins          [[lein-ring "0.12.5"]]
   :ring {:handler snowplow.clojure-collector.beanstalk/app}) ; .beanstalk -> .core if you don't need Beanstalk support
 

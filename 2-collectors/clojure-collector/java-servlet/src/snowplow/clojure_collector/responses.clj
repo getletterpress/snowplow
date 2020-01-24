@@ -46,6 +46,7 @@
   (merge
     {:value    id
      :expires (now-plus duration)
+     :same-site :none
      :path (if (nil? path)
        "/"
        path)}
